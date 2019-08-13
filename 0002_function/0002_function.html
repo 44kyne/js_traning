@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>function</title>
+  <script type="text/javascript">
+  <!--
+  function myFunc(){
+    myTbl = new Array("日","月","火","水","木","金","土");
+    myD = new Date();
+
+    myYear = myD.getFullYear();
+    myMonth = myD.getMonth() + 1;
+    myDate = myD.getDate();
+    myDay = myD.getDay();
+    myHours = myD.getHours();
+    myMinutes = myD.getMinutes();
+    mySeconds = myD.getSeconds();
+
+    myMess1 = myYear + "年" + myMonth + "月" + myDate + "日";
+    myMess2 = myTbl[myDay] + "曜日";
+    myMess3 = myHours + "時" + myMinutes + "分" + mySeconds + "秒";
+    myMess = myMess1 + "" + myMess2 + "" + myMess3;
+    document.write( myMess);
+  }
+  // -->
+  </script>
+  </head>
+  <body>
+    ただいまの時刻は、
+    <script type="text/javascript"><!--
+      myFunc();
+      // --></script>です<br>
+    <br>
+    もう一度言うとただいまの時刻は
+    <script type="text/javascript"><!--
+      myFunc();
+      // --></script>です<br>
+    <br>
+    スクリプトを関数化することで同じスクリプトを何回も使用することができます。
+  </body>
+</html>
