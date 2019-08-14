@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>日付と時間</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    <!--
+      myTbl = new Array("日","月","火","水","木","金","土");
+      myD = new Date();
+
+      myYear = myD.getFullYear();
+      myMonth = myD.getMonth() + 1;
+      myDate = myD.getDate();
+      myDay = myD.getDay();
+      myHours = myD.getHours();
+      myMinutes = myD.getMinutes();
+      mySeconds = myD.getSeconds();
+
+      myMess1 = myYear + "年" + myMonth + "月" + myDate + "日";
+      myMess2 = myTbl[myDay] + "曜日";
+      myMess3 = myHours + "時" + myMinutes + "分" + mySeconds + "秒";
+      myMess = myMess1 + "" + myMess2 + "" + myMess3;
+      document.write( myMess);
+    // -->
+    </script>
+    <br><br>
+    new Date()で現在日付を取得します。<br>
+    new Date()で取得した日付から様々な日付時刻情報を取得できます。<br>
+    getFullYear() // 年<br>
+    getMonth()+1 // 月<br>
+    getDate() // 日<br>
+    getDay() // 曜日<br>
+    getHours() // 時<br>
+    getMinutes() // 分<br>
+    getSeconds() // 秒<br>
+  </body>
+</html>
