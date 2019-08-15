@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>表示秒数</title>
+  <script type="text/javascript"><!--
+    myCnt = 1;
+
+    function myFunc(){
+      document.myForm.myFormSec.value = myCnt + "秒";
+      myCnt = myCnt + 1;
+    }
+// --></script>
+
+  </head>
+  <body>
+    <br><br>
+    <form name="myForm">
+      このサイトを表示してから <input type="text" size="10" name="myFormSec"> です。
+    </form>
+    <script type="text/javascript"><!--
+      setInterval("myFunc()",1000);
+    // --></script>
+      <br><br>
+      setInterval()を使ってサイトを表示してからの秒数を表示します。
+
+  </body>
+</html>

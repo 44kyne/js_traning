@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>履歴移動</title>
+  <script type="text/javascript"><!--
+
+    myD = new Date();
+
+    function myFunc() {
+
+      myYear = myD.getFullYear();
+      myMonth = myD.getMonth() + 1;
+      myDate = myD.getDate();
+      myDay = myD.getDay();
+      myHours = myD.getHours();
+      myMinutes = myD.getMinutes();
+      mySeconds = myD.getSeconds();
+
+      myMess1 = myYear + "年" + myMonth + "月" + myDate + "日";
+      myMess2 = myHours + "時" + myMinutes + "分" + mySeconds + "秒";
+      myMess = myMess1 + "" + myMess2 + "";
+
+      document.myForm.myFormSec.value = myMess;
+    }
+
+// --></script>
+
+  </head>
+  <body>
+    <br><br>
+    <form name="myForm">
+      <br>
+      <input type="text" size=30 name="myFormSec">
+      <br><br>
+      <input type="button" value="戻る" onclick="history.back">
+      <input type="button" value="更新" onclick="location.reload(true)">
+      <input type="button" value="進む" onclick="history.forward()">
+      <input type="button" value="トップページへ" onclick="location.href='0007_historyMove.html'">
+    </form>
+    <script type="text/javascript"><!--
+      myFunc();
+    // --></script>
+      <br><br>
+      <STRONG>&lt;INPUT&gt;</STRONG>タグ内に JavaScript を埋め込むことができます。
+      <br>
+      <STRONG>onclick</STRONG>属性にjavaScriptを埋め込むことでボタンクリック時に指定のjavaScriptを実行することができます。
+      <br>
+      <STRONG>history.back</STRONG>で前の履歴に戻ることができます。
+      <br>
+      <STRONG>location.reload(true)</STRONG>でページを更新することができます。
+      <br>
+      <STRONG>location.href</STRONG>はセットされたアドレスへ移動します。
+  </body>
+</html>
