@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>点滅する文字</title>
+  <script type="text/javascript"><!--
+
+    myFlg = 0;
+
+    function myFunc() {
+      if(myFlg == 0){
+        document.myForm.myFormMes.value = "いらっしゃいませ!";
+        myFlg = 1;
+      }else{
+        document.myForm.myFormMes.value = "";
+        myFlg = 0;
+      }
+    }
+
+// --></script>
+
+  </head>
+  <body>
+    <br><br>
+    <form name="myForm">
+      <br>
+      <input type="text" size="20" name="myFormMes">
+    </form>
+    <script type="text/javascript"><!--
+      setInterval("myFunc()",500);
+    // --></script>
+      <br><br>
+      0.5秒ごとに文字の表示と空文字の表示を繰り返して点滅を表現します。<br>
+  </body>
+</html>
