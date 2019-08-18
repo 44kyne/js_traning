@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>左からメッセージを表示</title>
+  <script type="text/javascript"><!--
+    MyMsg = "いらっしゃいませ　こんにちは！";
+    MyCnt = 0;
+
+    function myFunc() {
+      //console.log(MyCnt);
+      document.myForm.myFormMes.value = MyMsg.substring( 0 , MyCnt ) + "_";
+
+        // 全てのメッセージを表示していたら非表示へ戻す
+        MyCnt = ( MyCnt == MyMsg.length ) ? 0 : MyCnt + 1;
+    }
+
+// --></script>
+
+  </head>
+  <body>
+    <br><br>
+    <form name="myForm">
+      <br>
+      <input type="text" size="30" name="myFormMes">
+    </form>
+    <script type="text/javascript"><!--
+      setInterval("myFunc()",200);
+    // --></script>
+      <br><br>
+      0.2秒ごとに1文字ずつ文字を表示します。<br>
+      全ての文字列を表示したら非表示へ戻します。<br>
+  </body>
+</html>
