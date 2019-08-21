@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>左からメッセージを表示と点滅</title>
+  <script type="text/javascript"><!--
+    myMsg = "いらっしゃいませ　こんにちは！";
+    myCnt = 0;
+    myDspFlg = 0;
+
+    function myFunc() {
+      // メッセージが全て表示されていない場合
+      if( myDspFlg == 0 ){
+        document.myForm.myFormMes.value = myMsg.substring(0,myCnt);
+        if( myCnt == myMsg.length) {
+          myCnt = 0;
+          myDspFlg = 1;
+        }else{
+          myCnt += 1;
+        }
+      // メッセージが全て表示された場合
+      }else if ( myDspFlg == 1) {
+        document.myForm.myFormMes.value = "";
+        myDspFlg = 2;
+      // メッセージが全て表示された後、非表示となった場合
+      }else{
+        document.myForm.myFormMes.value = myMsg;
+        myCnt++;
+        // 5回ループ分まで点滅させたあと初めから処理をやり直す
+        if ( myCnt == 5){
+          myDspFlg = 0;
+          myCnt = 0;
+        // メッセージを非表示させる処理へのフラグを立てる
+        }else{
+          myDspFlg = 1;
+        }
+      }
+      //console.log(MyCnt);
+    }
+// --></script>
+
+  </head>
+  <body>
+    <br><br>
+    <form name="myForm">
+      <br>
+      <input type="text" size="30" name="myFormMes">
+    </form>
+    <script type="text/javascript"><!--
+      setInterval("myFunc()",200);
+    // --></script>
+      <br><br>
+      0.2秒ごとに1文字ずつ文字を表示します。<br>
+      全ての文字列を表示したら非表示と表示を繰り返して点滅を表現します。<br>
+      点滅を5回繰り返したら初めから処理をやり直します。<br>
+  </body>
+</html>
