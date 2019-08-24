@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>左から右へ流れるメッセージ</title>
+  <script type="text/javascript"><!--
+    myMsg = "いらっしゃいませ　こんにちは！";
+
+    // メッセージを2つを連結
+    myMsg = myMsg + myMsg;
+    myCnt = 0;
+
+    function myFunc() {
+      　//フォームへメッセージを表示
+        document.myForm.myFormMes.value = myMsg.substring(myCnt,myMsg.length);
+        // メッセージの長さ分までメッセージ開始位置をずらす
+        myCnt = ( myCnt == (myMsg.length/2) - 1 ) ? 0 : myCnt + 1;
+    }
+// --></script>
+
+  </head>
+  <body>
+    <br><br>
+    <form name="myForm">
+      <br>
+      <input type="text" size="30" name="myFormMes">
+    </form>
+    <script type="text/javascript"><!--
+      setInterval("myFunc()",200);
+    // --></script>
+      <br><br>
+      0.2秒ごとに左から右へメッセージを表示します<br>
+      メッセージ２つを連結します。
+      メッセージ開始位置からメッセージの長さ分まで表示します。<br>
+      メッセージ開始位置を徐々に右へずらすことによって、流れるようなメッセージを表現します。<br>
+      メッセージの最後まで開始位置が進んだら開始位置を初期化します。
+  </body>
+</html>
