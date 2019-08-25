@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>リンク元の調査</title>
+  <script type="text/javascript"><!--
+    if(document.referrer.length != 0) {
+      myRef = document.referrer;
+      if ( myRef.indexOf( "http://www.google.co.jp" ) == 0 ) {
+        document.write( "Google検索からお越しですね! ありがとうございます!");
+      }else if ( myRef == "http://www.red.oit-net.jp/tatsuya/java/index.htm" ){
+        document.write( "イヌでもわかるJavaScript講座　目次　からいらっしゃいませ！");
+      }else {
+        document.write(myRef + "からお越しですね！");
+      }
+    }else{
+    document.write( "直接このホームページへお越しくださってありがとうございます。 ");
+  }
+// --></script>
+
+  </head>
+  <body>
+    <br><br>
+    <script type="text/javascript"><!--
+    // --></script>
+      <br><br>
+      リンク元を調べるにはdocument.referrerを使います<br>
+      この中にリンク元のURLが入っています。<br>
+      お子にイリヤ直接URLを入力してページに入った場合はなにも入っていません。<br>
+      </body>
+</html>
